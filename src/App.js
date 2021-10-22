@@ -4,7 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    
+        <div className="container mx-auto">
+          <h1 className="flex"></h1>
+        </div>
     </div>
   );
 }
