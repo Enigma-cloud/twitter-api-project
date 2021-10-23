@@ -1,14 +1,15 @@
+import React from 'react';
+
+import SideBar from './components/sidebar/sidebar.component';
+import PageContent from './components/page-content/page-content.component';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        <div className="w-full h-screen flex">
-          <header className="bg-gray-400 h-screen w-24">
-            <a href="/" className="font-semibold">Title</a>
-          </header>
-          <div className="container"></div>
-        </div>
+    <div className="flex">
+      <SideBar  />
+      <PageContent />
     </div>
   );
 }
