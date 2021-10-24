@@ -7,8 +7,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="flex">
-      <SideBar  />
+    <div className="flex flex-row">
+      <SideBar />
       <PageContent />
     </div>
   );

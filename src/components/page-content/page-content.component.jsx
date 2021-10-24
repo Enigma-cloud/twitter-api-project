@@ -14,14 +14,14 @@ const PageContent = () => {
 }
 
 const PageHeader = ({ title }) => (
-    <div className="top-0 flex flex-row items-center justify-evenly w-full h-16 m-0 shadow-lg">
+    <div className="flex flex-row items-center justify-evenly h-16 m-0 shadow-lg">
         <h1>{title}</h1>
         <div className="flex flex-row justify-end w-full">
             <div className='search'>
                 <input className='search-input' type='text' placeholder='Search...' />
                 <FaSearch size='18' className='text-secondary my-auto' />
             </div>
-            <div className="button-container">
+            <div className="button-container header-button">
                 <IconContainer text={"Filter"} icon={<AiFillFilter size="28" />} />
             </div>
         </div>

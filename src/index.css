@@ -13,17 +13,18 @@
   }
 
   .sidebar {
-    @apply fixed top-0 left-0 h-screen
+    @apply h-screen
   }
 
   .page-content {
-    @apply w-auto lg:w-5/6 flex flex-col bg-gray-300;
+    @apply flex flex-col w-full h-full 
+          bg-gray-300 m-0;
   }
 
   .button-container {
-    @apply w-24 lg:w-1/6 m-0
+    @apply w-24 lg:w-64 m-0
             flex flex-col
-          bg-gray-500 text-white
+          bg-gray-500 text-white;
   }
 
   .icon {
@@ -40,6 +41,10 @@
 
   .sidebar-text {
     @apply hidden lg:flex;
+  }
+
+  .header-button {
+    @apply bg-gray-300 text-gray-500;
   }
 
   .search {
