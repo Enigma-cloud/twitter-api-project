@@ -10,7 +10,7 @@ import './sidebar.styles.css';
 const SideBar = () => {
     return (
         <div className="sidebar button-container">
-            <HeaderTitle text={"TwitBlade"} />
+            <HeaderTitle text={"Twitter API Project"} />
             <Link to={'/'}>
                 <IconContainer modifier={"icon-sidebar"} text={"Dashboard"} icon={<AiOutlineDashboard size="28" />} />
             </Link>
