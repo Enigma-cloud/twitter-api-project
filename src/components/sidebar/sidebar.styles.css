@@ -3,15 +3,25 @@
 @layer components {
 
     .sidebar {
-        @apply h-screen;
+        @apply h-screen w-24 lg:w-64 m-0;
     }
 
     .sidebar-header {
-        @apply relative flex items-center justify-center h-12 w-12
-            mt-2 mb-2 mx-auto;
+        @apply flex items-center justify-center h-24 w-40
+            mt-4 mb-4 mx-auto rounded-lg bg-gray-700
+            cursor-default hover:shadow-lg
+            transition-all duration-150 ease-linear;
     }
 
     .sidebar-text {
         @apply hidden lg:flex;
     }
+
+    .icon-sidebar {
+        @apply  relative flex items-center justify-start w-4/6
+                  mt-2 mb-2 mx-auto rounded-lg text-gray-400
+                  hover:bg-gray-700 
+                  hover:text-white hover:shadow-lg
+                  transition-all duration-200 ease-linear;
+      }
 }

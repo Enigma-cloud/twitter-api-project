@@ -29,7 +29,7 @@ const SideBar = () => {
 
 const HeaderTitle = ({ text }) => (
     <div className="sidebar-header">
-        <h1 className="p-0.5 text-md lg:text-xl">
+        <h1 className="text-center p-0.5 text-md lg:text-xl">
             {text}
         </h1>
     </div>
