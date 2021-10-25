@@ -1,0 +1,17 @@
+@tailwind components;
+
+@layer components {
+
+    .sidebar {
+        @apply h-screen;
+    }
+
+    .sidebar-header {
+        @apply relative flex items-center justify-center h-12 w-12
+            mt-2 mb-2 mx-auto;
+    }
+
+    .sidebar-text {
+        @apply hidden lg:flex;
+    }
+}

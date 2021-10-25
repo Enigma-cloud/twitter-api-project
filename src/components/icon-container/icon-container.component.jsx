@@ -1,9 +1,9 @@
 import React from 'react';
 
-const IconContainer = ({ icon, text }) => {
+const IconContainer = ({ icon, text, modifier }) => {
     return (
-        <button className="icon" title={text}>
-            <i className="mx-4 mr-2">{icon}</i>
+        <button className={`icon ${modifier ? modifier : ''}`} title={text}>
+            <i className={`${modifier ? 'mx-4 mr-2' : ''}`}>{icon}</i>
             <span className="sidebar-text">
                 {text}
             </span>
@@ -13,7 +13,8 @@ const IconContainer = ({ icon, text }) => {
 
 
 IconContainer.defaultProps = {
-    text: ''
+    text: '',
+    modifier: ''
 }
 
 export default IconContainer;
