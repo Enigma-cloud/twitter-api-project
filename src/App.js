@@ -1,5 +1,8 @@
-import React from 'react';
-import { withRouter, Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import { connect } from 'react-redux';
+
 
 import SideBar from './components/sidebar/sidebar.component';
 import DashboardPage from './pages/dashboard-page/dashboard-page.component';
@@ -23,4 +26,4 @@ function App() {
   );
 }
 
-export default withRouter(App);
+export default App;

@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { connect } from 'react-redux';
+import { selectSearchedUserProfile } from '../../redux/dashboard/dashboard.selectors';
 
 import Card from '../../components/card/card.component';
 import { LineChart } from '../../components/charts/charts.component';
@@ -6,12 +9,14 @@ import ContentContainer from '../../components/content-container/content-contain
 import PageContent from '../../components/page-content/page-content.component';
 
 const DashboardPage = () => {
+    const { searchedUserProfileProp } = this.props;
+
     return (
         <div className="content-container">
             <ContentContainer title={'Dashboard'}>
                 <PageContent>
                     <div className="flex flex-row justify-start">
-                        <h1 className="text-2xl text-gray-800">John Doe's statistics</h1>
+                        <h1 className="text-2xl text-gray-800">{searchedUserProfileProp}'s statistics</h1>
                     </div>
                     <div className="flex flex-row justify-between gap-6 w-full">
                         <Card>
@@ -64,6 +69,10 @@ const DashboardPage = () => {
             </ContentContainer>  
         </div>
     )
-}
+};
 
-export default DashboardPage;
+const mapStateToProps = (state) => ({
+    searchedUserProfileProp: selectSearchedUserProfile(state)
+});
+
+export default connect(mapStateToProps)(DashboardPage);
