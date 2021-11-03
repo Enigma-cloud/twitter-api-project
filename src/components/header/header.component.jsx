@@ -10,8 +10,7 @@ import { AiFillEdit} from 'react-icons/ai';
 
 import './header.styles.css';
 
-const PageHeader = ({ title }) => {
-    const { setSearchedUserProfileProp } = this.props;
+const PageHeader = ({ title, setSearchedUserProfileProp }) => {
 
     return (
         <div className="relative flex flex-row items-center justify-between h-16 w-full m-0 pl-4 pr-4 pt-6 bg-gray-200">

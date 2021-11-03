@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { connect } from 'react-redux';
 import { selectSearchedUserProfile } from '../../redux/dashboard/dashboard.selectors';
@@ -8,15 +8,14 @@ import { LineChart } from '../../components/charts/charts.component';
 import ContentContainer from '../../components/content-container/content-container.component';
 import PageContent from '../../components/page-content/page-content.component';
 
-const DashboardPage = () => {
-    const { searchedUserProfileProp } = this.props;
+const DashboardPage = ({ searchedUserProfileProp }) => {
 
     return (
         <div className="content-container">
             <ContentContainer title={'Dashboard'}>
                 <PageContent>
                     <div className="flex flex-row justify-start">
-                        <h1 className="text-2xl text-gray-800">{searchedUserProfileProp}'s statistics</h1>
+                        <h1 className="text-2xl text-gray-800">{searchedUserProfileProp ? `${searchedUserProfileProp}'s statistics` : ''}</h1>
                     </div>
                     <div className="flex flex-row justify-between gap-6 w-full">
                         <Card>
@@ -74,5 +73,9 @@ const DashboardPage = () => {
 const mapStateToProps = (state) => ({
     searchedUserProfileProp: selectSearchedUserProfile(state)
 });
+
+DashboardPage.defaultProps = {
+    searchedUserProfileProp: ''
+}
 
 export default connect(mapStateToProps)(DashboardPage);

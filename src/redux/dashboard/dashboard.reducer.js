@@ -1,12 +1,12 @@
 import { DashboardActionTypes } from "./dashboard.types";
 
 const INITIAL_STATE = {
-    searchedUserProfile: 'Jane Doe'
+    searchedUserProfile: ''
 };
 
-const DashboardReducer = (currentState=INITIAL_STATE, action) => {
+const dashboardReducer = (currentState=INITIAL_STATE, action) => {
     switch(action.type) {
-        case DashboardActionTypes:
+        case DashboardActionTypes.SEARCH_USER_PROFILE:
             return {
                 ...currentState,
                 searchedUserProfile: action.payload,
@@ -16,4 +16,4 @@ const DashboardReducer = (currentState=INITIAL_STATE, action) => {
     }
 };
 
-export default DashboardReducer;
+export default dashboardReducer;
